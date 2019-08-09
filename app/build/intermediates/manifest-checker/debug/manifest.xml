@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cypress.le.mesh.meshapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="23"
+        android:targetSdkVersion="28" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <meta-data
+        android:name="android.support.VERSION"
+        android:value="25.3.1" />
+
+    <application
+        android:name="com.cypress.le.mesh.meshapp.MeshApp"
+        android:allowBackup="false"
+        android:debuggable="true"
+        android:icon="@mipmap/bulbs_red"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:windowSoftInputMode="adjustPan" >
+        <activity
+            android:name="com.cypress.le.mesh.meshapp.Splash"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cypress.le.mesh.meshapp.ActivityGroup"
+            android:label="@string/title_activity_group"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cypress.le.mesh.meshapp.ActivityOtaUpgrade"
+            android:label="OTA Upgrade"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cypress.le.mesh.meshapp.NewRoom"
+            android:label="@string/title_activity_add_group"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cypress.le.mesh.meshapp.Delete"
+            android:label="@string/title_activity_delete"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.cypress.le.mesh.meshapp.LightingService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name="com.cypress.le.mesh.meshapp.MainActivity"
+            android:label="@string/title_activity_splash"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cypress.le.mesh.meshapp.ActivityModel"
+            android:label="@string/title_activity_activity_model"
+            android:parentActivityName="com.cypress.le.mesh.meshapp.ActivityGroup"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" >
+
+            <!-- <meta-data -->
+            <!-- android:name="android.support.PARENT_ACTIVITY" -->
+            <!-- android:value=".ActivityGroup" -->
+            <!-- tools:replace= "android:value"/> -->
+        </activity>
+        <activity
+            android:name="com.cypress.le.mesh.meshapp.leotaapp.MainActivity"
+            android:label="OTA Upgrade"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <service android:name="com.cypress.le.mesh.meshframework.MeshService" />
+        <service
+            android:name="com.cypress.le.mesh.meshapp.MeshAm"
+            android:exported="true" >
+        </service>
+
+        <activity
+            android:name="com.cypress.le.mesh.meshapp.PopUp"
+            android:label="POPUP"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cypress.le.mesh.meshapp.SensorSetting"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
+        <activity
+            android:name="com.cypress.le.mesh.meshapp.LightController"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <provider
+            android:name="com.android.tools.ir.server.InstantRunContentProvider"
+            android:authorities="com.cypress.le.mesh.meshapp.com.android.tools.ir.server.InstantRunContentProvider"
+            android:multiprocess="true" />
+    </application>
+
+</manifest>

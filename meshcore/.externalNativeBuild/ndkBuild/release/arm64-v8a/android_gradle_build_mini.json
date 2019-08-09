@@ -1,0 +1,16 @@
+{
+  "buildFiles": [
+    "E:\\BT-SDK\\common\\apps\\snip\\mesh\\peerapps\\Android\\src\\MeshApp\\meshcore\\src\\main\\jni\\Android.mk"
+  ],
+  "cleanCommands": [
+    "E:\\android-sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dE:\\BT-SDK\\common\\apps\\snip\\mesh\\peerapps\\Android\\src\\MeshApp\\meshcore\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-23 NDK_OUT\u003dE:/BT-SDK/common/apps/snip/mesh/peerapps/Android/src/MeshApp/meshcore/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dE:\\BT-SDK\\common\\apps\\snip\\mesh\\peerapps\\Android\\src\\MeshApp\\meshcore\\build\\intermediates\\ndkBuild\\release\\lib clean"
+  ],
+  "libraries": {
+    "native-lib-release-arm64-v8a": {
+      "artifactName": "native-lib",
+      "buildCommand": "E:\\android-sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dE:\\BT-SDK\\common\\apps\\snip\\mesh\\peerapps\\Android\\src\\MeshApp\\meshcore\\src\\main\\jni\\Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-23 NDK_OUT\u003dE:/BT-SDK/common/apps/snip/mesh/peerapps/Android/src/MeshApp/meshcore/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dE:\\BT-SDK\\common\\apps\\snip\\mesh\\peerapps\\Android\\src\\MeshApp\\meshcore\\build\\intermediates\\ndkBuild\\release\\lib E:/BT-SDK/common/apps/snip/mesh/peerapps/Android/src/MeshApp/meshcore/build/intermediates/ndkBuild/release/obj/local/arm64-v8a/libnative-lib.so",
+      "abi": "arm64-v8a",
+      "output": "E:\\BT-SDK\\common\\apps\\snip\\mesh\\peerapps\\Android\\src\\MeshApp\\meshcore\\build\\intermediates\\ndkBuild\\release\\obj\\local\\arm64-v8a\\libnative-lib.so"
+    }
+  }
+}

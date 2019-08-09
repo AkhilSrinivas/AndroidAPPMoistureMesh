@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ScrollingActivity"
+    android:id="@+id/Content">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:fitsSystemWindows="true"
+        android:layout_height="@dimen/app_bar_height"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:fitsSystemWindows="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="@color/primary">
+
+            <ImageView
+                android:id="@+id/bgheader"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/img"
+                android:fitsSystemWindows="true"
+                android:scaleType="center"
+                app:layout_collapseMode="parallax" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:id="@+id/layout"
+        tools:showIn="@layout/activity_scrolling" android:layout_width="match_parent"
+        android:layout_height="match_parent" tools:context=".ScrollingActivity">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/layout_relative"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Group Settings"
+                        android:layout_margin="@dimen/activity_horizontal_margin"
+                        android:id="@+id/textView31"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true" />
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/onoffBtnView"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:layout_toEndOf="@+id/imageView1"
+
+                        android:text="Get Sensor Value" />
+
+                    <LinearLayout
+                        android:id="@+id/onoffBtnView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/seekBar5"
+                        android:layout_alignRight="@id/RelativeLayout"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/onbtn"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/green"
+                            android:textColor="@color/text" />
+
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/imageView2"
+                        android:layout_alignBottom="@+id/textView28"
+                        android:src="@drawable/brightness"
+                        app:srcCompat="@drawable/round" />
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textView28"
+                        android:layout_alignStart="@id/textView28"
+                        android:layout_marginTop="20dp"
+                        android:text="Show Results" />
+
+                    <Button
+                        android:id="@+id/redbtn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignBottom="@id/textView21"
+                        android:layout_marginLeft="355dp"
+                        android:background="@mipmap/bulbs_red"
+                        android:textColor="@color/text" />
+
+                    <ImageView
+                        android:id="@+id/imageView22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imageView1"
+                        android:layout_alignStart="@+id/imageView1"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/brightness"
+                        app:srcCompat="@drawable/round" />
+
+
+
+
+                </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                app:cardElevation="1dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Components"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:id="@+id/textView32"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/textView28" />
+                    <com.cypress.le.mesh.meshapp.ExpandableHeightListView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/list">
+                    </com.cypress.le.mesh.meshapp.ExpandableHeightListView>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                app:cardElevation="1dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true">
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv3"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                app:cardElevation="1dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/inside"
+                    android:layout_height="wrap_content">
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+        <RelativeLayout
+            android:layout_gravity="bottom|right"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/accent">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:background="@android:color/holo_red_dark"
+                android:id="@+id/proxy"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/proxy"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Create Group"
+                    android:visibility="invisible"
+                    android:id="@+id/lightSet"
+                    android:gravity="center|left"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/text"
+                    android:textStyle="bold"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_alignParentStart="true"
+                    />
+               <!-- <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Configure"
+                    android:id="@+id/config"
+                    android:gravity="center|left"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/text"
+                    android:textStyle="bold"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_alignParentStart="true"
+                    /> -->
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Connect to Network"
+                    android:id="@+id/connectToProxy"
+                    android:gravity="center|left"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/text"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignStart="@+id/lightSet" />
+                    <!--android:layout_gravity="left|center_vertical"
+                   />-->
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Device"
+                    android:textColor="@color/text"
+                    android:id="@+id/button3"
+                    android:textStyle="bold"
+                    android:background="@android:color/transparent"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_alignParentEnd="true"
+                    />
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+    <!--<android.support.design.widget.FloatingActionButton android:id="@+id/fab"-->
+        <!--android:layout_width="wrap_content" android:layout_height="wrap_content"-->
+        <!--android:theme="@style/fab"-->
+        <!--android:layout_margin="@dimen/fab_margin" app:layout_anchor="@id/app_bar"-->
+        <!--app:layout_anchorGravity="bottom|end" android:src="@drawable/cam" />-->
+</android.support.design.widget.CoordinatorLayout>

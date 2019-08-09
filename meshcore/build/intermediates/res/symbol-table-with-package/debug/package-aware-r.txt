@@ -1,0 +1,2 @@
+com.cypress.le.mesh.meshcore
+string app_name
